@@ -1,0 +1,29 @@
+{
+  "name": "parables/laravel-adr-tools",
+  "description": "Laravel Artisan wrapper for the Command-line tools for working with Architecture Decision Records",
+  "type": "library",
+  "license": "MIT",
+  "version": "0.0.1",
+  "autoload": {
+    "psr-4": {
+      "Parables\\LaravelAdrTools\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Parables",
+      "email": "38154990+Parables@users.noreply.github.com"
+    }
+  ],
+  "require-dev": {
+    "illuminate/support": "^11.32",
+    "illuminate/console": "^11.32"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Parables\\LaravelAdrTools\\AdrToolsServiceProvider"
+      ]
+    }
+  }
+}
