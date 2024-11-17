@@ -4,6 +4,7 @@ namespace Parables\LaravelAdrTools;
 
 use Illuminate\Support\ServiceProvider;
 use Parables\LaravelAdrTools\Commands\AdrCommand;
+use Parables\LaravelAdrTools\Commands\AdrNewCommand;
 use Parables\LaravelAdrTools\Commands\MakeAdrCommand;
 
 class AdrToolsServiceProvider extends  ServiceProvider
@@ -18,6 +19,7 @@ class AdrToolsServiceProvider extends  ServiceProvider
     $this->commands([
       AdrCommand::class,
       MakeAdrCommand::class,
+      AdrNewCommand::class,
     ]);
   }
 }
