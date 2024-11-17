@@ -16,7 +16,7 @@ class AdrCommand extends Command
     $args = $this->option('args');
 
     // Construct the command to execute
-    $command = __DIR__ . "../bin/adr-$subcommand " . implode(' ', $args);
+    $command = __DIR__ . "/../bin/adr-$subcommand " . implode(' ', $args);
 
     // Execute the command
     $output = shell_exec($command);
