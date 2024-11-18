@@ -24,7 +24,7 @@ class AdrFile extends Command
     $filename = $this->argument('filename');
 
     // Construct the command to execute
-    $command = __DIR__ . "/../bin/adr-file $filename";
+    $command = __DIR__ . "/../bin/_adr_file $filename";
 
     // Execute the command
     $output = shell_exec($command);
