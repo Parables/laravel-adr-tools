@@ -7,8 +7,8 @@ use Illuminate\Console\Command;
 class AdrHelp extends Command
 {
   protected $signature = 'adr:help 
-                          {helpCcommand? : Displays help for that command}
-                          {helpSubcommand?* : Displays help for that subcommand}';
+                          {_help_Ccommand? : Displays help for that command}
+                          {help_Subcommand?* : Displays help for that subcommand}';
 
   protected $description = 'Displays help for the given command/subcommand or lists the available commands';
 
@@ -30,8 +30,8 @@ to specify the command to be used to display the help text. The default pager is
   public function handle(): void
   {
     // Get the subcommand and additional arguments
-    $helpCommand = trim($this->argument('helpCommand'));
-    $helpSubcommand = implode(' ', $this->argument('helpSubcommand') ?? []);
+    $helpCommand = trim($this->argument('_help_Ccommand'));
+    $helpSubcommand = implode(' ', $this->argument('help_Subcommand') ?? []);
 
     // Construct the command to execute
     $command = __DIR__ . "/../bin/adr-help $helpCommand $helpSubcommand";
