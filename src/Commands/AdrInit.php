@@ -61,7 +61,7 @@ Examples:
     $this->info($template);
 
     // Construct the command to execute
-    $command = __DIR__ . "/../bin/adr-init $directory";
+    $command = __DIR__ . "/../bin/adr-init $directory $template";
 
     // Execute the command
     $output = shell_exec($command);
