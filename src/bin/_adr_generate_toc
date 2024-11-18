@@ -43,6 +43,7 @@ do
     esac
 done
 
+# TODO: @next-release: Customize this heading
 cat <<EOF
 # Architecture Decision Records
 

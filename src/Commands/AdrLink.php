@@ -14,10 +14,13 @@ class AdrLink extends Command
 
   protected $description = 'Creates a link between two ADRs, from SOURCE to TARGET new';
 
-  protected  $help = ' usage: php artisan adr:link SOURCE LINK TARGET REVERSE-LINK
+  protected  $help = 'Examples: 
 
-  php artisan adr:link 12 "Amends" 10 "Amended by"
-  ';
+1. To create a link with the description "Ammends" from ADR 12 to ADR 10 with the description "Ammended by", use the following command:
+   
+   php artisan adr:link 12 "Amends" 10 "Amended by"
+
+';
 
   public function handle(): void
   {
