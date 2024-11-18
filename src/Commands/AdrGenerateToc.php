@@ -21,7 +21,7 @@ class AdrGenerateToc extends Command
 
 2. To insert some markdown right after the main H1 heading(# Architecture Decision Records):
 
-     php artisan adr:generate-toc -i "<br> An ADR captures a single justified design choice that addresses a functional or non-functional requirement that is architecturally significant and its rationale" > README.md
+     php artisan adr:generate-toc -i "<br> An ADR captures a single justified design choice ..." > README.md
 
  ';
 

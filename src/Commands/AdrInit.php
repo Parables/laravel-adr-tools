@@ -15,7 +15,8 @@ class AdrInit extends Command
 
   protected $description = 'Initialises the directory of architecture decision records';
 
-  protected $help = 'This command creates a subdirectory of the current working directory and creates the first ADR in that subdirectory, recording the decision to record architectural decisions with ADRs.
+  protected $help = 'This command creates a subdirectory of the current working directory 
+and creates the first ADR in that subdirectory, recording the decision to record architectural decisions with ADRs.
 
 If the DIRECTORY is not given, the ADRs are stored in the directory `doc/adr`. 
   

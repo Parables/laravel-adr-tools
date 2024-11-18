@@ -12,7 +12,8 @@ class AdrGenerate extends Command
 
   protected $description = 'Generates summary documentation about the architecture decision records';
 
-  protected $help = 'Generates summary documentation about the architecture decision records that is typically fed into the tool chain for publishing a project\'s  documentatation. 
+  protected $help = 'Generates summary documentation about the architecture decision records
+that is typically fed into the tool chain for publishing a project\'s  documentatation. 
   
 Examples:
 

@@ -12,7 +12,8 @@ class AdrHelp extends Command
 
   protected $description = 'Displays help for the given command/subcommand or lists the available commands';
 
-  protected $help = 'This uses the environment variables ADR_PAGER or PAGER (in that order) to specify the command to be used to display the help text. The default pager is: more.
+  protected $help = 'This uses the environment variables ADR_PAGER or PAGER (in that order) 
+to specify the command to be used to display the help text. The default pager is: more.
   
   Examples:
 
