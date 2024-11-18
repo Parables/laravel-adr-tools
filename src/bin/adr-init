@@ -12,35 +12,25 @@ eval "$($(dirname $0)/adr-config)"
 ##
 ## If the DIRECTORY is not given, the ADRs are stored in the directory `doc/adr`.
 
-ADR_DIR="doc/adr"
 if [ ! -z $1 ]; then
   mkdir -p "$1"
   echo "$1" >.adr-dir
   ADR_DIR="$1"
 fi
-echo "$ADR_DIR" >.adr-dir
 
-# Prompt user to choose an init.md file
-echo "Please choose a template:"
-echo "1) Michael Nygard's Template"
-echo "2) Parables Boltnoel's Template"
-read -p "Enter your choice (1 or 2): " choice
-
-# Set the template based on user choice
-if [ "$choice" == "1" ]; then
-  ADR_TEMPLATE="$adr_template_dir/init-michael-nygard.md"
-elif [ "$choice" == "2" ]; then
-  ADR_TEMPLATE="$adr_template_dir/init-parables-boltnoel.md"
+if [ ! -z $2 ]; then
+  template= "$2"
 else
-  echo "Invalid choice. Using default template."
-  ADR_TEMPLATE="$adr_template_dir/init-parables-boltnoel.md" # Default to second template if invalid input
+  template = "init-parables-boltnoel.md"
 fi
 
-"$adr_bin_dir/adr-new" record-architecture-decisions
+ADR_TEMPLATE="$adr_template_dir/$template"
+
+"$adr_bin_dir/adr-new" Record Architecture Decisions
 
 # Copy additional template files into the initialized directory
-cp "$ADR_TEMPLATE" "$ADR_DIR/adr/decisions/templates/template.md"
-cp "$adr_template_dir/template-parables-boltnoel.md" "$ADR_DIR/adr/decisions/templates/template-parables-boltnoel.md"
-cp "$adr_template_dir/template-full-parables-boltnoel.md" "$ADR_DIR/adr/decisions/templates/template-full-parables-boltnoel.md"
+cp "$ADR_TEMPLATE" "$ADR_DIR/templates/template.md"
+cp "$adr_template_dir/template-parables-boltnoel.md" "$ADR_DIR/templates/template-parables-boltnoel.md"
+cp "$adr_template_dir/template-full-parables-boltnoel.md" "$ADR_DIR/templates/template-full-parables-boltnoel.md"
 
 echo "Initialized ADR directory at $ADR_DIR with selected template and additional files."

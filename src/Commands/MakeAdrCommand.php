@@ -4,7 +4,7 @@ namespace Parables\LaravelAdrTools\Commands;
 
 class MakeAdrCommand extends AdrNewCommand
 {
-  protected $signature = 'adr:new 
+  protected $signature = 'make:adr 
                           {--s|superceded=* :  A reference (number or partial filename) of a previous decision that the new decision supercedes.}
                           {--l|link=* : Links the new ADR to a previous ADR. }
                           {title* : Concatenated to form the title of the new ADR}';
