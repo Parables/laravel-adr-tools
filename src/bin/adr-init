@@ -18,14 +18,18 @@ if [ ! -z $1 ]; then
   ADR_DIR="$1"
 fi
 
-template = "init-parables-boltnoel.md"
+# Set default template
+adr_template="init-parables-boltnoel.md"
+
+# Check if $2 is provided and override default if so
 if [ ! -z "$2" ]; then
-  template = "$2"
+  adr_template="$2"
 fi
 
-ADR_TEMPLATE="$adr_template_dir/$template"
+# Construct full path for ADR_TEMPLATE using defined variables
+ADR_TEMPLATE="$adr_template_dir/$adr_template"
 
-echo "$template"
+# Output full template path
 echo "$ADR_TEMPLATE"
 
 "$adr_bin_dir/adr-new" Record Architecture Decisions

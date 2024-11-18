@@ -51,10 +51,8 @@ Examples:
     };
 
     $template = match (true) {
-      str_contains(needle: '1', haystack: $template),
-      str_contains(needle: 'm', haystack: $template) => 'init-michael-nygard.md',
-      str_contains(needle: '2', haystack: $template),
-      str_contains(needle: 'p', haystack: $template) => 'init-parables-boltnoel.md',
+      str_contains(needle: '1', haystack: $template) => 'init-michael-nygard.md',
+      str_contains(needle: '2', haystack: $template) => 'init-parables-boltnoel.md',
       default => 'init-parables-boltnoel.md',
     };
 
