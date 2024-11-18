@@ -18,13 +18,16 @@ if [ ! -z $1 ]; then
   ADR_DIR="$1"
 fi
 
-if [ ! -z $2 ]; then
-  template= "$2"
+if [ ! -z "$2" ]; then
+  template = "$2"
 else
   template = "init-parables-boltnoel.md"
 fi
 
-ADR_TEMPLATE="$adr_template_dir/$template"
+ADR_TEMPLATE="$adr_template_dir/init-parables-boltnoel.md"
+
+echo "$template"
+echo "$ADR_TEMPLATE"
 
 "$adr_bin_dir/adr-new" Record Architecture Decisions
 
