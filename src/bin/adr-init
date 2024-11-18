@@ -34,7 +34,7 @@ mkdir -p "$ADR_DIR/templates"
 cp "$ADR_TEMPLATE" "$ADR_DIR/templates/template.md"
 cp "$adr_template_dir/template-michael-nygard.md" "$ADR_DIR/templates/template-michael-nygard.md"
 cp "$adr_template_dir/template-parables-boltnoel.md" "$ADR_DIR/templates/template-parables-boltnoel.md"
-cp "$adr_template_dir/template-full-parables-boltnoel.md" "$ADR_DIR/templates/template-full-parables-boltnoel.md"
+cp "$adr_template_dir/template-usage-parables-boltnoel.md" "$ADR_DIR/templates/template-usage-parables-boltnoel.md"
 
 ADR_TEMPLATE="$ADR_TEMPLATE" \
   "$adr_bin_dir/adr-new" Record Architecture Decisions
