@@ -29,14 +29,12 @@ fi
 # Construct full path for ADR_TEMPLATE using defined variables
 ADR_TEMPLATE="$adr_template_dir/$adr_template"
 
-# Output full template path
-echo "$ADR_TEMPLATE"
-
-"$adr_bin_dir/adr-new" Record Architecture Decisions
+ADR_TEMPLATE="$ADR_TEMPLATE" && "$adr_bin_dir/adr-new" Record Architecture Decisions
 
 # Copy additional template files into the initialized directory
 mkdir -p "$ADR_DIR/templates"
 cp "$ADR_TEMPLATE" "$ADR_DIR/templates/template.md"
+cp "$adr_template_dir/template-michael-nygard.md" "$ADR_DIR/templates/template-michael-nygard.md"
 cp "$adr_template_dir/template-parables-boltnoel.md" "$ADR_DIR/templates/template-parables-boltnoel.md"
 cp "$adr_template_dir/template-full-parables-boltnoel.md" "$ADR_DIR/templates/template-full-parables-boltnoel.md"
 
