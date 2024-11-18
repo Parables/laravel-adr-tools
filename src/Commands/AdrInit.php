@@ -58,8 +58,10 @@ Examples:
       default => 'init-parables-boltnoel.md',
     };
 
+    $this->info($template);
+
     // Construct the command to execute
-    $command = __DIR__ . "/../bin/adr-init $directory $template";
+    $command = __DIR__ . "/../bin/adr-init $directory";
 
     // Execute the command
     $output = shell_exec($command);
